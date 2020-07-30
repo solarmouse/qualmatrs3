@@ -1,11 +1,11 @@
 Package: qualmatrs3
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Organize Hall Lab Survey
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Erika Mitchell, Turner DeBlieux
+Maintainer: Turner DeBlieux <tdeblieu@iu.edu>
+Description: Helps to organize and analyze Hall Lab field survey data.  
+Specifically, zooplankton prevalence as a function of various predictors.  
+License: 
 Encoding: UTF-8
 LazyData: true
