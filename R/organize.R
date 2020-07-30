@@ -6,7 +6,7 @@
 organize <- function(x) {
   x <- as.data.frame(x)
   x$Lake_Name <- factor(x$Lake_Name)
-  levels(x$Lake_Name)
+  #levels(x$Lake_Name)
 
   x$M_m_e[which(x$M_m_e == "#DIV/0!")]<-NA
   x$M_s_e[which(x$M_s_e == "#DIV/0!")]<-NA
