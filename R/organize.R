@@ -29,6 +29,7 @@ organize <- function(x) {
   MostxData$E_Chla_Ratio <- MostxData$E_Ratio/MostxData$Edible_Chl
   MostxData$N_Chla <- MostxData$N_ug/MostxData$Edible_Chl
   MostxData$P_Chla <- MostxData$P_ug/MostxData$Edible_Chl
+  MostxData$Log_Chla <- log(MostxData$Edible_Chl)
 
   return(MostxData)
 }
