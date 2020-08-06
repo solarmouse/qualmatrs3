@@ -10,7 +10,9 @@ combiner <- function(x, y){
   x$id <- factor(paste(x$Lake_Name, c(x$Round)))
   y$id <- factor(paste(y$Lake, c(y$Week)))
   df2 <- merge(x, y, by = "id", all = TRUE, incomparables = NULL)
-  sort(df2$id, decreasing = FALSE, na.last = TRUE)
+  #df2$Lake <- gsub('.{1}$', '', df2$id)
+  #df2$Week <- as.numeric(sub("\\.[^.]*m$", "", df2$id))
+
   return(df2)
 }
 #Need some way of assining place holders a Lake name and Week.
