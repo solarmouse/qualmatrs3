@@ -2,12 +2,10 @@
 #'
 #'Prints 3 graphs with quality indices on the x axis and prevelance on the y axis
 #'@param x A dataframe
-#'@param y A numeric Year
 #'@return 3 graphs
 #'@export
-print.quality.disease <- function(x, y) {
-  x <- as.data.frame(x)
-  xdata <- subset(x, format(as.Date(x$date), "%Y")== y)
+print.quality.disease <- function(x) {
+  xdata <- as.data.frame(x)
   xdata$Lake_Name <- factor(xdata$Lake_Name)
   par(mfrow = c(2,3))
   for (i in 1:length(levels(xdata$Lake_Name))) {

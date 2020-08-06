@@ -6,9 +6,8 @@
 #' @return sixdata graphs with the same axdatais
 #' @exdataport
 
-print.same.axis <- function(x, y){
-  x <- as.data.frame(x)
-  xdata <- subset(x, format(as.Date(x$date), "%Y")== y)
+print.same.axis <- function(x){
+  xdata <- as.data.frame(x)
   xdata$Lake_Name <- factor(xdata$Lake_Name)
 
   par(mfrow = c(2,3))
