@@ -16,13 +16,13 @@ seplot <- function(df, year, prev, name){
   if (name == "quality"){
     print.quality.disease(df)
   }else
-    if (name == "prevelance"){
+    if (name == "prevalence"){
       print.same.axis(df)} else
         if (name == "Types"){
-          print("quality, prevelance")
+          print("quality, prevalence")
         }else{
         print("Function failed: Please list graph types or
-              writes Types if you would like a list of graph options")
+              write Types if you would like a list of graph options")
       }
 
 }
