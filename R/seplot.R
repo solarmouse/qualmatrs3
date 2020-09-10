@@ -11,18 +11,19 @@ seplot <- function(df, year, prev, name){
   year <- as.numeric(year)
   prev <- as.numeric(prev)
   name <- as.character(name)
-  df <- subset(df, format(as.Date(df$date), "%Y")== year)
-  df <- prev(df, prev)
-  if (name == "quality"){
+  if (is.na(year) == TRUE){
+    stop("ERROR:You have not selected a year, if you wish to print multiple years, please use the print.mult.year function")
+  }else{
+    df <- subset(df, format(as.Date(df$date), "%Y")== year)
+    df <- prev(df, prev)
+    if (name == "quality"){
     print.quality.disease(df)
-  }else
-    if (name == "Time Series"){
-      print.same.axis(df)} else
-        if (name == "Types"){
-          print("quality, Time Series")
+      }else if (name == "Time Series"){
+      print.same.axis(df)
+          }else if (name == "CP Ratio"){
+          print.CP.ratio(df)
         }else{
-        print("Function failed: Please list graph types or
-              write Types if you would like a list of graph options")
-      }
-
+          stop("ERROR:You have not inputed a valid graphtype Current types are quality and Time Series")}
+  }
+}
 }
